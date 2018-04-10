@@ -4,37 +4,37 @@
 <h1>Signup</h1>
 <form action="/signup" method="post">    
     
-    <p>
+    
         <label>User</label>
         <input type="text" name="username" value="{{ username }}"/>
         {% if username_error %}
-            {{ username_error }}
+            <span class="error">{{ username_error }}</span>
         {% endif %}
     
-    </p>
+    <br>
         <label>Password</label>
         <input type="password" name="password" />
         {% if password_error %}
-            {{ password_error }}
+            <span class="error">{{ password_error }}</span>
         {% endif %}
-    </p>
-    <p>
+    
+    <br>
         <label>Verify Password</label>
         <input type="password" name="verify-password" />
         {% if match_error %}
-            {{ match_error }}
+            <span class="error">{{ match_error }}</span>
         {% endif %}
-    </p>
-    <p>
+    
+    <br>
         <label>Email (optional)</label>
         <input type="text" name="email" value="{{ email }}"/>
         {% if email_error %}
-            {{ email_error }}
+            <span class="error">{{ email_error }}</span>
         {% endif %}
-    </p>
-    <p>
+    
+    <br>
         <input type="submit" value="Submit" />
-    </p>
+    
 </form>
 
 {% endblock %}
